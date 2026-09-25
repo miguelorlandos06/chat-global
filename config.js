@@ -1,22 +1,22 @@
 // config.js
 export const CONFIG = {
   server: {
-    port: parseInt(process.env.PORT) || 3000,
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    env: process.env.NODE_ENV || 'development'
+    port: 10000,
+    baseUrl: 'https://chglobalfree.onrender.com',
+    env: 'production'
   },
 
   jwt: {
-    secret: process.env.JWT_SECRET || 'chatglobal_secret_key_cambiar_en_produccion_2024',
+    secret: 'chatglobal_secret_key_cambiar_en_produccion_2024',
     expiresIn: '7d'
   },
 
   postgres: {
-    connectionString: process.env.DATABASE_URL || null,
-    ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false,
+    connectionString: 'postgresql://chat_global_user:XOi9kLBuetQBQEpXkQmzp1jfmbD4eNJj@dpg-dar1vbh7lnhs739ogavg-a.oregon-postgres.render.com/chat_global',
+    ssl: { rejectUnauthorized: false },
     host: 'localhost',
     port: 5432,
-    database: 'chatglobal',
+    database: 'chat_global',
     user: 'postgres',
     password: 'postgres'
   },
